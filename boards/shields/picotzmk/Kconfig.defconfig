@@ -1,0 +1,4 @@
+if SHIELD_PICOTZMK
+  config ZMK_KEYBOARD_NAME
+  default "picotzmk"
+endif

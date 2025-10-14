@@ -1,0 +1,8 @@
+file_format: "1"
+id: picotzmk
+name: picotzmk
+type: shield
+url: https://github.com/Kneecrust/zmk-config-picotzmk
+requires: [pro_micro]
+features:
+  - keys
