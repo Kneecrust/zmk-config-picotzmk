@@ -17,13 +17,13 @@
 
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <13 14>;
+            key-positions = <12 13>;
             bindings = <&kp TAB>;
         };
 
         combo_bksp {
             timeout-ms = <50>;
-            key-positions = <21 22>;
+            key-positions = <20 21>;
             bindings = <&kp BKSP>;
         };
     
