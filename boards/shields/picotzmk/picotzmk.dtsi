@@ -11,10 +11,9 @@
 
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
-        display-name = "60% All 1U";
-
+        display-name = "Default";
+        transform = <&default_transform>;
         kscan = <&kscan0>;
-        transform = <&matrix_transform0>;
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 150 100    0    0       0     0     0>
