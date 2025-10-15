@@ -1,4 +1,7 @@
 #include "picotzmk.dtsi"
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &pinctrl {
     spi0_default: spi0_default {
@@ -18,8 +21,6 @@
         };
     };
 };
-
-#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &spi0 {
     status = "okay";
@@ -59,5 +60,13 @@
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-  };
+    scroller {
+            layers = <3>;
+            //process-next;
+            input-processors = 
+            <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
+            <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_scaler 1 64>,<&zip_xy_to_scroll_mapper>;
+        };
+    };
 };

@@ -3,38 +3,88 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define MAIN 0 
+#define SYM 1 
+#define NUM 2 
+#define NAV 3 
+
+
 / {
+
+    combos { compatible = "zmk,combos"; };
+
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+        };
+
+        ltq: ltq {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTQ";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <180>;
+        };
+
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <135>;
+            quick-tap-ms = <0>;
+        };
+    };
+
+
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
-            label = "Az123";
+        
+        MAIN_layer {
+          display-name = "Default";
             bindings = <
-&kp Q     &kp W      &kp E      &kp R        &kp T      &kp ESC      &mkp MCLK    &kp Y       &kp U      &kp I      &kp O      &kp P     
-&kp A     &kp S      &kp D      &kp F        &kp G                                &kp H       &kp J      &kp K      &kp L      &kp SEMI            
-&kp Z     &kp X      &kp C      &kp V        &kp B                                &kp N       &kp M      &kp COMMA  &kp DOT    &kp FSLH
-&kp N1    &kp N2     &kp CAPS   &kp SPACE    &mkp LCLK                            &mkp RCLK   &kp BKSP   &kp ENTER  &kp N9     &kp N0
->;
-       };
-
-       function_layer {
-           label = "Func";
-           bindings = <
-&kp Q     &kp W      &kp E      &kp R        &kp T      &kp ESC      &mkp MCLK    &kp Y       &kp U      &kp I      &kp O      &kp P     
-&kp A     &kp S      &kp D      &kp F        &kp G                                &kp H       &kp J      &kp K      &kp L      &kp SEMI            
-&kp Z     &kp X      &kp C      &kp V        &kp B                                &kp N       &kp M      &kp COMMA  &kp DOT    &kp FSLH
-&kp N1    &kp N2     &kp CAPS   &kp SPACE    &mkp LCLK                            &mkp RCLK   &kp BKSP   &kp ENTER  &kp N9     &kp N0
->;
-       };
-
-        bt_layer {
-           display-name = "BT";    
-           label = "BT";
-           bindings = <
-&bt BT_CLR     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &kp EQUAL     &kp Y       &kp U      &kp I      &kp O      &kp P     
-&bt BT_CLR_ALL &kp S        &kp D        &kp F        &kp G                                      &kp H       &kp J      &kp K      &kp L      &kp SEMI            
-&kp Z          &kp X        &kp C        &kp V        &kp B                                      &kp N       &kp M      &kp COMMA  &kp DOT    &kp FSLH
-&kp N1         &kp N2       &kp CAPS     &kp SPACE    &mkp LCLK                                  &mkp RCLK   &kp BKSP   &kp ENTER  &kp N9     &kp N0
+&kp Q        &kp W       &kp E       &kp R         &kp T      &kp ESC      &mkp MCLK    &kp Y       &kp U         &kp I        &kp O       &kp P     
+&hm LCTRL A  &hm LALT S  &hm LGUI D  &hm LSHFT F   &kp G                                &kp H       &hm RSHFT J   &hm RGUI K   &hm RALT L  &hm RCTRL SEMICOLON            
+&kp Z        &kp X       &kp C       &kp V         &kp B                                &kp N       &kp M         &kp COMMA    &kp DOT     &kp FSLH
+&kp N1       &kp N2      &kp CAPS    &lt 2 SPACE   &mkp LCLK                            &mkp RCLK   &kp BKSP      &kp ENTER    &kp TAB     &kp N0
 >;
         };
+
+        SYM {
+            bindings = <
+&kp GRAVE     &kp CARET     &kp POUND     &kp AMPS      &kp PIPE     &trans    &trans   &kp PLUS    &kp LBRC   &kp RBRC   &kp MINUS  &kp EQUAL     
+&kp EXCL      &kp QMARK     &kp COLON     &kp EQUAL     &kp DLLR                        &kp MINUS   &kp LPAR   &kp RPAR   &kp LT     &kp GT             
+&kp PRCNT     &kp QMARK     &kp STAR      &kp PLUS      &kp BSLH                        &kp AT      &kp LBKT   &kp RBKT   &trans     &trans 
+&trans        &trans        &trans        &trans        &trans                          &trans      &trans     &trans     &trans     &trans
+>;
+       };
+
+       NUM {
+            bindings = <
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans    &trans   &kp N6  &kp N7    &kp N8    &kp N9   &kp N0     
+&trans  &trans  &trans  &trans  &trans                       &trans  &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT        
+&trans  &trans  &trans  &trans  &trans                       &trans  &trans    &trans    &trans   &trans  
+&trans  &trans  &trans  &trans  &trans                       &trans  &trans    &trans    &trans   &trans
+
+       };
+
+       NAV {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans    &trans   &trans  &trans  &trans  &trans  &trans      
+&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans          
+&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  
+&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
+
+       };
     };
 };
