@@ -36,7 +36,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        cpi = <600>;
+        cpi = <500>;
         // swap-xy; /* optional */
         // invert-x; /* optional */
         // invert-y; /* optional */
@@ -61,7 +61,7 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
     scroller {
-            layers = <2>;
+            layers = <1>;
             //process-next;
             input-processors = 
             <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
