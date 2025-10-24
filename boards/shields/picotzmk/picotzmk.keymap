@@ -29,13 +29,13 @@
 
         combo_enter {
             timeout-ms = <50>;
-            key-positions = <20 21>;
+            key-positions = <28 29>;
             bindings = <&kp ENTER>;
         };
         
         combo_apost {
             timeout-ms = <50>;
-            key-positions = <30 31>;
+            key-positions = <8 9>;
             bindings = <&kp APOS>;
         };
     
@@ -101,7 +101,7 @@
             bindings = <
 &kp GRAVE     &kp CARET     &kp POUND     &kp AMPS      &kp PIPE     &trans    &trans   &kp PLUS    &kp LBRC   &kp RBRC   &kp MINUS  &kp EQUAL     
 &kp EXCL      &kp QMARK     &kp COLON     &kp EQUAL     &kp DLLR                        &kp MINUS   &kp LPAR   &kp RPAR   &kp LT     &kp GT             
-&kp PRCNT     &kp QMARK     &kp STAR      &kp PLUS      &kp BSLH                        &kp AT      &kp LBKT   &kp RBKT   &trans     &trans 
+&kp PRCNT     &kp AT        &kp STAR      &kp PLUS      &kp BSLH                        &kp AT      &kp LBKT   &kp RBKT   &trans     &trans 
 &trans        &trans        &trans        &trans        &trans                          &trans      &trans     &trans     &trans     &trans
 >;
        };
