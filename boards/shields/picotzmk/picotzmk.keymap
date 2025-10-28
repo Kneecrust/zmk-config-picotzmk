@@ -6,6 +6,7 @@
 #define MAIN 0
 #define NUM 1
 #define SYM 2
+#define MED 3
  
 
 
@@ -37,6 +38,12 @@
             timeout-ms = <50>;
             key-positions = <8 9>;
             bindings = <&kp APOS>;
+        };
+        
+         combo_media {
+            timeout-ms = <50>;
+            key-positions = <35 38>;
+            bindings = <&lt 3>;
         };
     
     };
@@ -103,6 +110,16 @@
 &kp EXCL      &kp QMARK     &kp COLON     &kp EQUAL     &kp DLLR                        &kp MINUS   &kp LPAR   &kp RPAR   &kp LT     &kp GT             
 &kp PRCNT     &kp AT        &kp STAR      &kp PLUS      &kp BSLH                        &kp AT      &kp LBKT   &kp RBKT   &trans     &trans 
 &trans        &trans        &trans        &trans        &trans                          &trans      &trans     &trans     &trans     &trans
+>;
+
+        };
+
+       MED {
+            bindings = <
+&trans  &trans  &trans        &trans  &trans    &trans    &trans   &trans  &trans    &kp K_MUTE     &trans      &trans     
+&trans  &trans  &kp C_BRI_UP  &trans  &trans                       &trans  &kp LEFT  &kp K_VOL_UP   &kp RIGHT   &trans        
+&trans  &trans  &kp C_BRI_DN  &trans  &trans                       &trans  &trans    &kp K_VOL_DN   &trans      &trans  
+&trans  &trans  &trans        &trans  &trans                       &trans  &trans    &trans         &trans      &trans
 >;
        };
     };
