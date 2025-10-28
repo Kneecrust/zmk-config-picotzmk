@@ -39,13 +39,15 @@
             key-positions = <8 9>;
             bindings = <&kp APOS>;
         };
-        
-         combo_media {
-            timeout-ms = <50>;
-            key-positions = <35 38>;
-            bindings = <&lt 3>;
-        };
     
+    };
+
+    conditional_layers {
+      compatible = "zmk,conditional-layers";
+      tri_layer {
+          if-layers = <NUM SYM>;
+          then-layer = <MED>;
+      };
     };
 
     behaviors {
