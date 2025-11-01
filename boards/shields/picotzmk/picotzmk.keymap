@@ -99,10 +99,10 @@
 
        NUM {
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans    &trans   &kp N6  &kp N7    &kp N8    &kp N9      &kp N0     
-&trans  &trans  &trans  &trans  &trans                       &trans  &kp LEFT  &kp UP    &kp RIGHT   &trans        
-&trans  &trans  &trans  &trans  &trans                       &trans  &trans    &kp DOWN  &trans      &trans  
-&trans  &trans  &trans  &trans  &trans                       &trans  &trans    &trans    &trans      &trans
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans    &trans   &kp N6    &kp N7    &kp N8    &kp N9      &kp N0     
+&trans  &trans  &trans  &trans  &trans                       &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT   &trans        
+&trans  &trans  &trans  &trans  &trans                       &trans    &trans    &kp DOWN  &trans      &trans  
+&trans  &trans  &trans  &trans  &trans                       &trans    &trans    &trans    &trans      &trans
 >;
        };
 
@@ -118,10 +118,10 @@
 
        MED {
             bindings = <
-&trans  &trans  &trans        &trans  &trans    &trans    &trans   &trans  &trans    &kp K_MUTE     &trans      &trans     
-&trans  &trans  &kp C_BRI_UP  &trans  &trans                       &trans  &kp LEFT  &kp K_VOL_UP   &kp RIGHT   &trans        
-&trans  &trans  &kp C_BRI_DN  &trans  &trans                       &trans  &trans    &kp K_VOL_DN   &trans      &trans  
-&trans  &trans  &trans        &trans  &trans                       &trans  &trans    &trans         &trans      &trans
+&trans  &trans  &trans        &trans        &trans    &trans    &trans   &trans  &trans        &kp K_MUTE     &trans      &trans     
+&trans  &trans  &kp C_BRI_DN  &kp C_BRI_UP  &trans                       &trans  &kp K_VOL_UP  &kp K_VOL_DN   &trans      &trans        
+&trans  &trans  &trans        &trans        &trans                       &trans  &trans        &trans         &trans      &trans  
+&trans  &trans  &trans        &trans        &trans                       &trans  &trans        &trans         &trans      &trans
 >;
        };
     };
