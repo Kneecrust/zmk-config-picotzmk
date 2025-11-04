@@ -118,7 +118,7 @@
 
        MED {
             bindings = <
-&trans  &trans  &trans        &trans        &trans    &trans    &trans   &kp K_PREV  &kp K_NEXT    &kp K_MUTE     &trans      &trans     
+&trans  &trans  &trans        &trans        &trans    &trans    &trans   &kp C_PREV  &kp C_NEXT    &kp K_MUTE     &trans      &trans     
 &trans  &trans  &kp C_BRI_DN  &kp C_BRI_UP  &trans                       &trans      &kp K_VOL_UP  &kp K_VOL_DN   &trans      &trans        
 &trans  &trans  &trans        &trans        &trans                       &trans      &trans        &trans         &trans      &trans  
 &trans  &trans  &trans        &trans        &trans                       &trans      &trans        &trans         &trans      &trans
