@@ -43,19 +43,19 @@
         combo_copy {
             timeout-ms = <50>;
             key-positions = <23 24>;
-            bindings = <&kp LGUI(&kp C)>;
+            bindings = <&kp LGUI>, <&kp C>;
         };
 
         combo_cut {
             timeout-ms = <50>;
             key-positions = <23 25>;
-            bindings = <&kp LGUI(&kp X)>;
+            bindings = <&kp LGUI>, <&kp X>;
         };
 
         combo_paste {
             timeout-ms = <50>;
             key-positions = <24 25>;
-            bindings = <&kp LGUI(&kp V)>;
+            bindings = <&kp LGUI>, <&kp V>;
         };
     
     };
