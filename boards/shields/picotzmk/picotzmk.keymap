@@ -39,6 +39,24 @@
             key-positions = <8 9>;
             bindings = <&kp APOS>;
         };
+
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <23 24>;
+            bindings = <&kp LGUI(C)>;
+        };
+
+        combo_cut {
+            timeout-ms = <50>;
+            key-positions = <23 25>;
+            bindings = <&kp LGUI(X)>;
+        };
+
+        combo_paste {
+            timeout-ms = <50>;
+            key-positions = <24 25>;
+            bindings = <&kp LGUI(V)>;
+        };
     
     };
 
