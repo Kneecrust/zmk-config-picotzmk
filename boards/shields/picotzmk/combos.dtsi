@@ -16,9 +16,9 @@
     COMBO(enter,             &kp ENTER,          28 29,            MAIN SYM GAME,       40, 120)
     COMBO(backspace,         &kp BKSP,           18 19,            MAIN SYM GAME,       40, 100)
     COMBO(apostrophe,        &kp APOS,           8 9,              MAIN SYM GAME,       40, 100)
-    COMBO(copy,              &kp LG(C),          23 24,            MAIN SYM GAME,       50, 120)
-    COMBO(cut,               &kp LG(X),          23 25,            MAIN SYM GAME,       40, 120)
-    COMBO(paste,             &kp LG(V),          24 25,            MAIN SYM GAME,       50, 120)
+    COMBO(copy,              &kp LG(C),          23 24,            MAIN SYM,            50, 120)
+    COMBO(cut,               &kp LG(X),          23 25,            MAIN SYM,            40, 120)
+    COMBO(paste,             &kp LG(V),          24 25,            MAIN SYM,            50, 120)
     COMBO(back,              &kp LG(LEFT),       17 18,            MAIN,                50, 120)
     COMBO(forward,           &kp LG(RIGHT),      15 16,            MAIN,                50, 120)
     
